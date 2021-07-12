@@ -1,7 +1,7 @@
 {
   "name": "@uniswap/interface",
   "description": "Uniswap Interface",
-  "homepage": ".",
+  "homepage": "https://walker1992.github.io/uniswap-interface",
   "private": true,
   "devDependencies": {
     "@ethersproject/experimental": "^5.2.0",
@@ -137,7 +137,8 @@
     "postinstall": "yarn compile-contract-types",
     "start": "yarn compile-contract-types && react-scripts start",
     "test": "react-scripts test --env=jsdom",
-    "prestart": "yarn graphql:generate && touch src/locales/en-US.po"
+    "prestart": "yarn graphql:generate && touch src/locales/en-US.po",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -158,5 +159,7 @@
     ]
   },
   "license": "GPL-3.0-or-later",
-  "dependencies": {}
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
 }
